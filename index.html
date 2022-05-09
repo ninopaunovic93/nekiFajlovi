@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="module" src="renderBase.js" defer ></script>
-    <script type="module" src="dom.js" defer ></script>
-    <script type="module" src="objekat.js" defer ></script>
-    <script type="module" src="renderUser.js" defer ></script>
-    <script type="module" src="main.js" defer></script>
-    <style>
-        .container {
-            display: flex;
-            flex-direction: column;   
-        }
-        .korisnik {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        .hide {
-            visibility: hidden;
-        }
-        p {
-            width: 17%;
-        }
-    </style>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="index.js" defer></script>
+    <script type="module" src="korisnici.js" defer></script>
 </head>
+
 <body>
-    
+
+    <form action="" method="" id="forma">
+        <label for="" id="formName">LOGIN FORM</label>
+        <label for="user">USERNAME</label>
+        <input type="text" name="user" id="user">
+
+        <label for="pass">PASSWORD</label>
+        <input type="password" name="password" id="pass">
+        <a href="forgotPassword.html">Forgot your password?</a>
+
+        <input type="submit" value="LOGIN" id="submit">
+        <a href="register.html" id="register">REGISTER</a>
+    </form>
+
 </body>
+
 </html>
