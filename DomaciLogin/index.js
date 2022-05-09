@@ -21,10 +21,12 @@ forma.addEventListener('submit', (event) => {
             if (korisnik.pass === password.value) {
                 postoji = true
                 alert('ulogovali ste se ')
+                return
             }
-
+            alert('username ili password nisu tacni')
+            return
         }
-
+        
     })
-    alert('username ili password nisu tacni')
+    
 })
