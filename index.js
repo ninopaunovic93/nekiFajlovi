@@ -1,32 +1,32 @@
 import { korisnici } from "./korisnici.js"
 
-// const loginBtn = document.querySelector('#submit')
 const userName = document.querySelector('#user')
 const password = document.querySelector('#pass')
 const forma = document.querySelector('form')
+const users =  JSON.parse(localStorage.getItem('korisnici'))
 
 forma.addEventListener('submit', (event) => {
     event.preventDefault()
 
-    let postoji = false
+    if(userName.value =='admin' && password.value == 'admin') {
+        window.location.href = "admin.html";
+        return   
+    }
 
-    korisnici.forEach(korisnik => {
-
-        // console.log(korisnik)
-        // console.log(korisnik.user)
-
-        if (korisnik.user === userName.value) {
-
-
-            if (korisnik.pass === password.value) {
-                postoji = true
-                alert('ulogovali ste se ')
-                return
-            }
-            alert('username ili password nisu tacni')
-            return
-        }
-        
-    })
+    let ifExist = false
     
+    users.forEach(userOne => {
+
+        if (userOne.user === userName.value) {
+
+            if (userOne.pass === password.value) {
+                ifExist = true
+                window.location.href = "userPage.html"
+            }
+            else {
+                alert('username ili password nisu tacni')
+            }
+        }
+    })
 })
+

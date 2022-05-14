@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(14, 12, 31, 1) 15%, rgba(79, 67, 188, 1) 100%);
+}
+#container{
+    color: #68e0cc;
+    
+    display: flex;
+    justify-content: center;
+}
+#wraper {
+    animation-name: formAmbientLight;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    border: 3px solid #3f43bc;
+    border-radius: 50px;
+    height: auto;
+    width: 80%;
+    padding: 20px;
+}
+#wraper h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#keyObject {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#keyObject p {
+    font-size: 16px;
+    font-weight: bold;
+    width: 14%;
+}
+#stylingUsers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+#stylingUsers p {
+    width: 14%;
+}
+
+
+@keyframes formAmbientLight {
+    0% {
+        filter: drop-shadow(0 0 0px #68e0cc);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 30px #68e0cc);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 0px #68e0cc);
+    }
+}
